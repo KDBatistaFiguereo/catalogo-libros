@@ -1,4 +1,4 @@
-package com.kdbf.digital_library.application.domain.entity;
+package com.kdbf.digital_library.application.domain.model.entity;
 
 import java.util.Set;
 import java.util.UUID;
