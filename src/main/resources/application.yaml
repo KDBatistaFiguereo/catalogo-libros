@@ -1,3 +1,9 @@
 spring:
   application:
     name: digital-library
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+base_url_gutenberg: https://gutendex.com/
