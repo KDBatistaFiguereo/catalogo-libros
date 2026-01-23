@@ -1,4 +1,4 @@
-package com.kdbf.digital_library.adapters.out;
+package com.kdbf.digital_library.adapters.out.api;
 
 import java.net.http.HttpClient;
 import java.time.Duration;
