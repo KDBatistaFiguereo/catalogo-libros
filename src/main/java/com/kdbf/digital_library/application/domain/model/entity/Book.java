@@ -15,9 +15,13 @@ public class Book {
   String description;
   String publisher;
   int pageCount;
+  String language;
+  int quantity; // Amount of books
 
   public Book(String identifier, Set<String> authors, String title, String description, String publisher,
-      int pageCount) {
+      int pageCount, String language, int quantity) {
+    this.language = language;
+    this.quantity = quantity;
     this.id = UUID.randomUUID();
     this.identifier = identifier;
     this.authors = authors;
