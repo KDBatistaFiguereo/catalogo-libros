@@ -3,14 +3,17 @@ package com.kdbf.digital_library.application.domain.model.entity;
 import java.util.Set;
 import java.util.UUID;
 
+import com.kdbf.digital_library.application.domain.model.object_value.Isbn;
+
 import lombok.Getter;
 
 @Getter
 public class Book {
 
   UUID id;
+  Isbn isbn;
   String identifier; // An alternative identifier to ISBN
-  Set<String> authors; // a book can be done by many people
+  Set<Author> authors; // a book can be done by many people
   String title;
   String description;
   String publisher;
@@ -19,17 +22,17 @@ public class Book {
   int copiesInStock; // Amount of books
   int downloads;
 
-  public Book(String identifier, Set<String> authors, String title, String description, String publisher,
+  public Book(Isbn isbn, String identifier, Set<Author> authors, String title, String description, String publisher,
       int pageCount, String language, int copiesInStock, int downloads) {
-    this.language = language;
-    this.copiesInStock = copiesInStock;
-    this.id = UUID.randomUUID();
+    this.isbn = isbn;
     this.identifier = identifier;
     this.authors = authors;
     this.title = title;
     this.description = description;
     this.publisher = publisher;
     this.pageCount = pageCount;
+    this.language = language;
+    this.copiesInStock = copiesInStock;
     this.downloads = downloads;
   }
 
