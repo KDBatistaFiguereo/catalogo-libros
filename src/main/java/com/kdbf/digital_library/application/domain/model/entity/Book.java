@@ -16,12 +16,13 @@ public class Book {
   String publisher;
   int pageCount;
   String language;
-  int quantity; // Amount of books
+  int copiesInStock; // Amount of books
+  int downloads;
 
   public Book(String identifier, Set<String> authors, String title, String description, String publisher,
-      int pageCount, String language, int quantity) {
+      int pageCount, String language, int copiesInStock, int downloads) {
     this.language = language;
-    this.quantity = quantity;
+    this.copiesInStock = copiesInStock;
     this.id = UUID.randomUUID();
     this.identifier = identifier;
     this.authors = authors;
@@ -29,6 +30,7 @@ public class Book {
     this.description = description;
     this.publisher = publisher;
     this.pageCount = pageCount;
+    this.downloads = downloads;
   }
 
   @Override
